@@ -1,12 +1,22 @@
 setInterval(function () {
-  //Bangalore
-  let bangaloreElement = document.querySelector("#bangalore");
-  if (bangaloreElement) {
-    let bangaloreDate = document.querySelector("#bangalore .date");
-    let bangaloreTime = document.querySelector("#bangalore .time");
-    bangaloreDate.innerHTML = moment().format("MMMM Do, YYYY");
-    bangaloreTime.innerHTML = moment()
-      .tz("Asia/Kolkata")
+  //Indianapolis
+  let indianapolisElement = document.querySelector("#indianapolis");
+  if (indianapolisElement) {
+    let indianapolisDate = document.querySelector("#indianapolis .date");
+    let indianapolisTime = document.querySelector("#indianapolis .time");
+    indianapolisDate.innerHTML = moment().format("MMMM Do, YYYY");
+    indianapolisTime.innerHTML = moment()
+      .tz("America/Indiana/Indianapolis")
+      .format("h:mm:ss [<small>]A[</small>]");
+  }
+  //Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDate = document.querySelector("#tokyo .date");
+    let tokyoTime = document.querySelector("#tokyo .time");
+    tokyoDate.innerHTML = moment().format("MMMM Do, YYYY");
+    tokyoTime.innerHTML = moment()
+      .tz("Asia/Tokyo'")
       .format("h:mm:ss [<small>]A[</small>]");
   }
 }, 1000);
@@ -33,4 +43,3 @@ function updateCity(event) {
 
 let citiesSelect = document.querySelector("#selectCity");
 citiesSelect.addEventListener("change", updateCity);
-
